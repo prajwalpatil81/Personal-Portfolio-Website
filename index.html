@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <title>Personal Portfolio website</title>
+    <style>
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .skill {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        transition: transform 0.3s ease, color 0.3s ease;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+
+      .skill i {
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .skill:hover {
+        transform: translateY(-5px);
+      }
+
+      .skill::after {
+        content: attr(data-skill);
+        font-size: 0.7rem;
+        font-weight: bold;
+        opacity: 1;
+        text-align: center;
+      }
+
+      /* Icon Colors */
+      .html i {
+        color: #e34c26;
+      }
+      .css i {
+        color: #264de4;
+      }
+      .js i {
+        color: #f0db4f;
+      }
+      .react i {
+        color: #61dbfb;
+      }
+      .node i {
+        color: #68a063;
+      }
+      .express i {
+        color: #000;
+      }
+      .php i {
+        color: #777bb4;
+      }
+      .laravel i {
+        color: #ff2d20;
+      }
+      .mysql i {
+        color: #00758f;
+      }
+      .python i {
+        color: #3776ab;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="Images/logo.png" alt="" class="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>WEb Coder</p>
+          <h1>
+            Hi, I'm <span>Prajwal</span> <br />
+            Patil from India
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------About Me Section------------------------------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Images/user.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am a passionate Full Stack Developer with expertise in HTML,
+              CSS, JavaScript, React, PHP, Node.js, Express.js, and MySQL. I
+              have hands-on experience building dynamic web applications and
+              solving real-world problems. I completed a Web Development
+              internship at Udemy, gaining proficiency in both frontend and
+              backend technologies. I am eager to contribute innovative
+              solutions and continuously enhance my skills in the tech industry.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tabs" id="skills">
+              <ul>
+                <li>
+                  <span>Web Developer</span> <br />
+                  Designing of web applications using Frontend Technology
+                </li>
+                <li>
+                  <span>PHP Developer</span> <br />
+                  Designing of web applications using PHP & Laravel
+                </li>
+                <li>
+                  <span>Backend Developer</span> <br />
+                  Developing of backend applications
+                </li>
+              </ul>
+              <div class="skills-container">
+                <div class="skill html" data-skill="HTML">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <div class="skill css" data-skill="CSS">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="skill js" data-skill="JavaScript">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <div class="skill react" data-skill="React.js">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="skill node" data-skill="Node.js">
+                  <i class="fab fa-node-js"></i>
+                </div>
+                <div class="skill express" data-skill="Express.js">
+                  <i class="fas fa-server"></i>
+                </div>
+                <div class="skill php" data-skill="PHP">
+                  <i class="fab fa-php"></i>
+                </div>
+                <div class="skill laravel" data-skill="Laravel">
+                  <i class="fab fa-laravel"></i>
+                </div>
+                <div class="skill mysql" data-skill="MySQL">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="skill python" data-skill="Python">
+                  <i class="fab fa-python"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Web Development Bootcamp Intern at udemy </span> <br />
+                  <p>
+                    - Completed an intensive web development bootcamp, gaining
+                    hands-on experience in HTML, CSS, JavaScript, React,
+                    Node.js, Express, and MySQL.
+                  </p>
+                  <p>
+                    - Developed responsive websites, dynamic front-end
+                    interfaces using React, and server-side applications with
+                    Node.js and Express.
+                  </p>
+                  <p>
+                    - Worked with relational databases like MySQL for data
+                    storage and retrieval.
+                  </p>
+                  <p>
+                    - Acquired debugging and problem-solving skills, ensuring
+                    high-quality code output
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>PDA COLLEGE OF ENGINEERING</span> <br />
+                  <p>Bachelor's of Engineering (B.E)</p>
+                  <p>Electronics & Communication Engineering (ECE)</p>
+                </li>
+                <li>
+                  <span>NVS POLYTECHNIC</span> <br />
+                  <p>Diploma</p>
+                  <p>Electronics & Communication Engineering (ECE)</p>
+                </li>
+                <li>
+                  <span>SVPM HIGH SCHOOL</span> <br />
+                  <p>Class X</p>
+                  <p>Karnataka State Board</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------------services---------------------------------- -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+              omnis exercitationem inventore, temporibus quod harum, nostrum
+              perferendis id ratione corporis consequatur enim assumenda aliquid
+              dolorem reprehenderit iste ea, reiciendis cumque?
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>ui/ux</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+              omnis exercitationem inventore, temporibus quod harum, nostrum
+              perferendis id ratione corporis consequatur enim assumenda aliquid
+              dolorem reprehenderit iste ea, reiciendis cumque?
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>app Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+              omnis exercitationem inventore, temporibus quod harum, nostrum
+              perferendis id ratione corporis consequatur enim assumenda aliquid
+              dolorem reprehenderit iste ea, reiciendis cumque?
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------------Portfolio-------------------------------------- -->
+    <div id="portfolio">
+      <div class="container">
+        <div class="sub-title">My Work</div>
+        <div class="work-list">
+          <div class="work">
+            <img src="Images/work-1.png" alt="" />
+            <div class="layer">
+              <h3>Social media App1</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Commodi soluta dignissimos deserunt officia architecto mollitia
+                saepe ducimus, impedit placeat tempora odio quaerat modi nisi!
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Images/work-2.png" alt="" />
+            <div class="layer">
+              <h3>Social media App2</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Commodi soluta dignissimos deserunt officia architecto mollitia
+                saepe ducimus, impedit placeat tempora odio quaerat modi nisi!
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Images/work-3.png" alt="" />
+            <div class="layer">
+              <h3>Social media App3</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Commodi soluta dignissimos deserunt officia architecto mollitia
+                saepe ducimus, impedit placeat tempora odio quaerat modi nisi!
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+
+    <!-- -------------------------contact----------------------------------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">contact me</h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>prajwalppatil81@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i>8147498567</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com" target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://github.com/prajwalpatil81" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/prajwalpatil159"
+                target="_blank"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/prajwalpatil81" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+            <a href="Images/Prajwal_Patil_Resume.pdf" download class="btn btn2"
+              >Download Cv</a
+            >
+          </div>
+          <div class="contact-right">
+            <form action="">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="your message"
+              ></textarea>
+              <button type="submit" class="btn btn2">submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          copywright <span><i class="fa-solid fa-copyright"></i></span> By
+          prajwal patil.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
